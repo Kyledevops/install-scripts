@@ -1,4 +1,4 @@
-cat << 'EOF' > setup_cleanup.sh
+cat << 'EOF' > /tmp/setup_cleanup.sh
 #!/bin/bash
 
 # === 1. 環境變數設定 ===
@@ -55,3 +55,6 @@ echo "3. 排程時間: 每天凌晨 03:00"
 echo "您可以輸入 'sudo crontab -l' 來確認排程。"
 echo "=========================================="
 EOF
+
+chmod +x /tmp/setup_cleanup.sh
+bash /tmp/setup_cleanup.sh
