@@ -24,3 +24,8 @@ curl -sSL https://raw.githubusercontent.com/Kyledevops/install-scripts/refs/head
 ```bash
 curl -s https://install.zerotier.com | sudo bash
 ```
+
+## setup_cleanup 
+```bash
+curl -sSL https://raw.githubusercontent.com/Kyledevops/install-scripts/refs/heads/main/setup_cleanup.sh | bash
+```
