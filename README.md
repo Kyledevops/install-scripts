@@ -29,3 +29,8 @@ curl -s https://install.zerotier.com | sudo bash
 ```bash
 curl -sSL https://raw.githubusercontent.com/Kyledevops/install-scripts/refs/heads/main/setup_cleanup.sh | bash
 ```
+
+## install dcgm exporter
+```bash
+curl -sSL https://raw.githubusercontent.com/Kyledevops/install-scripts/refs/heads/main/install_dcgm.sh | bash
+```
