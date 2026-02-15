@@ -34,3 +34,8 @@ curl -sSL https://raw.githubusercontent.com/Kyledevops/install-scripts/refs/head
 ```bash
 curl -sSL https://raw.githubusercontent.com/Kyledevops/install-scripts/refs/heads/main/install_dcgm.sh | bash
 ```
+
+## install Vector log agent
+```bash
+curl --sSL https://raw.githubusercontent.com/Kyledevops/install-scripts/refs/heads/main/install_vector.sh | bash
+```
