@@ -64,14 +64,13 @@ include_labels = ["log=true"]
 type = "remap"
 inputs = ["docker_logs"]
 source = '''
-  .host_name = get_hostname!()
   .host_ip = "${HOST_IP}"
 '''
 
 [sinks.victoria_logs]
 type = "http"
 inputs = ["enrich_host_info"]
-uri = "http://${VICTORIALOGS_HOST}:${VICTORIALOGS_PORT}/insert/jsonline?_stream_fields=stream,host_name,host_ip,container_name&_msg_field=message&_time_field=timestamp"
+uri = "http://${VICTORIALOGS_HOST}:${VICTORIALOGS_PORT}/insert/jsonline?_stream_fields=stream,host,host_ip,container_name&_msg_field=message&_time_field=timestamp"
 compression = "zstd"
 
   [sinks.victoria_logs.encoding]
@@ -130,3 +129,19 @@ echo "🌐 傳送目標: ${VICTORIALOGS_HOST}:${VICTORIALOGS_PORT}"
 echo "📡 本機 IP: ${HOST_IP}"
 echo "📊 API 地址: http://localhost:8686"
 echo "📝 查看日誌: journalctl -u vector -f"
+
+echo "-----------------------------------------"
+echo "💡 如何在 Docker Compose 中啟用日誌採集？"
+echo "-----------------------------------------"
+echo "請在你的 docker-compose.yml 服務中加入 'labels: ['log=true']'"
+echo ""
+echo "services:"
+echo "  your-app:"
+echo "    image: your-image"
+echo "    container_name: my-app-name  # 建議固定名稱，方便儀表板搜尋"
+echo "    labels:"
+echo '      - log=true             # 必須有這行，Vector 才會抓取'
+echo ""
+echo "範例："
+echo "  echo 'labels: ['log=true']' >> docker-compose.yml"
+echo "-----------------------------------------"
