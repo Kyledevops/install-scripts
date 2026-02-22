@@ -19,6 +19,7 @@ services:
     privileged: true
     command:
       - --port=9200
+      - --docker_only=true
     devices:
       - /dev/kmsg
     volumes:
