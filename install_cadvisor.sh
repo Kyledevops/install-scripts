@@ -41,7 +41,7 @@ EOF
 
 # 5. 啟動服務
 echo "⚙️ 正在啟動 cAdvisor 容器..."
-sudo docker-compose up -d
+sudo docker compose up -d
 
 # 6. 驗證狀態
 if [ "$(sudo docker inspect -f '{{.State.Running}}' cadvisor)" == "true" ]; then
