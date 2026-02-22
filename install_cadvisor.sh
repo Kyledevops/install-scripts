@@ -1,7 +1,6 @@
 #!/bin/bash
-
 # 1. 定義版本與路徑
-CADVISOR_VERSION="v0.56.2"
+CADVISOR_VERSION="0.56.2"
 INSTALL_DIR="/opt/cadvisor"
 COMPOSE_FILE="$INSTALL_DIR/docker-compose.yml"
 
@@ -19,7 +18,7 @@ services:
     container_name: cadvisor
     privileged: true
     command:
-    - --port=9200
+      - --port=9200
     devices:
       - /dev/kmsg
     volumes:
