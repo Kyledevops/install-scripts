@@ -20,6 +20,8 @@ services:
     command:
       - --port=9200
       - --docker_only=true
+      - --disable_root_cgroup_stats=true
+      - --store_container_labels=false
     devices:
       - /dev/kmsg
     volumes:
