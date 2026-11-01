@@ -25,9 +25,9 @@ echo "使用者名稱: $USERNAME"
 echo "密碼: $PASSWORD"
 
 mkdir /home/tw/.ssh
-echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtNRTWTVB4pRhRl4tZTJwxu/rnbPPsJX5CMuphN8aIOdLwIosk5v1uZGW5PwT9LescS9PDyNX1+RJPIDJ2r4G7EmLb/KUy7lVx23RcQJLRoe7HzucEre6fZiaTjS+TT2HEdKM5XkxtRnWkpTy9eFK1PgEHJx/bfYexTBwryL+toqMRZdYO2ys2LdNtDcHkpnp4d76F1x42D6FWiRxFvE5KlYwdt1opy2gL3U+YlMfB4YSz4Wj4xLJgajLqgc0WvPAA8n9csfT7XBjNWu6Q36iXgrgx2xgT+xe2qsdJ5hL+gBli2rmOyJDD5om4LIggmSMeh/AbYzO9L5ulLZl85BFd ab-2025" >> /home/tw/.ssh/authorized_keys
+echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBz0z201FygKyZ0D++AtyAQMGqhGt3QC3uVP1v1jqzuS ab-202611" >> /home/tw/.ssh/authorized_keys
 chown -R tw:tw /home/tw/.ssh
 chmod 700 /home/tw/.ssh
 chmod 600 /home/tw/.ssh/authorized_keys
 
-echo "已匯入: ab-2025 sshkey"
+echo "已匯入: ab-202611 sshkey"
